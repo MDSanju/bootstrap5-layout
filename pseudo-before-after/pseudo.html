@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Using Parpus</title>
+    <style>
+        .top-text {
+            display: inline-block;
+        }
+        
+        .top-text::after,
+        .top-text:hover::before {
+            content: '';
+            border: 2px solid orangered;
+            width: 100%;
+            display: block;
+            margin-top: 4px;
+        }
+        
+        h1::after {
+            content: '*';
+            color: orangered;
+        }
+        
+        blockquote::before {
+            content: open-quote;
+            color: orangered;
+            font-size: 2em;
+        }
+        
+        blockquote::after {
+            content: close-quote;
+            color: orangered;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>There got used some different sort of Pseudo Elements in useful cases</h1>
+    <br><br><br>
+
+    <section>
+        <h2 class="top-text">Lorem ipsum dolor sit amet:</h2>
+        <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit</blockquote>
+        <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, modi.</blockquote>
+    </section>
+</body>
+
+</html>
